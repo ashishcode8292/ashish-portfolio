@@ -15,9 +15,17 @@ import ScrollProgress from './components/ScrollProgress'
 import BackToTop from './components/BackToTop'
 import ScrollReveal from './components/ScrollReveal'
 import PageLoader from './components/PageLoader'
+import MaintenancePage from './components/MaintenancePage'
 
 
 function App() {
+  const isMaintenancePreview =
+    new URLSearchParams(window.location.search).get('maintenance') === '1'
+    
+  if (isMaintenancePreview) {
+    return <MaintenancePage />
+  }
+
   return (
     <main>
       <PageLoader />
