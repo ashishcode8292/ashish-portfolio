@@ -14,17 +14,13 @@ import FAQ from './sections/FAQ'
 import ScrollProgress from './components/ScrollProgress'
 import BackToTop from './components/BackToTop'
 import ScrollReveal from './components/ScrollReveal'
-import NotFound from './sections/NotFound'
 import PageLoader from './components/PageLoader'
 
 
 function App() {
-  if (window.location.pathname !== '/') {
-    return <NotFound />
-  }
   return (
     <main>
-        <PageLoader />
+      <PageLoader />
 
       <a
         href="#home"
