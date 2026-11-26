@@ -10,7 +10,7 @@ const projects = [
     statusStyle: 'border-emerald-400/20 bg-emerald-400/10 text-emerald-300',
     description:
       'A business website for a digital service centre at Raniganj Bus Stand, featuring RTPS services, service rate lists, Quick Counter and a direct WhatsApp order desk.',
-    image: '/projects/adarsh-cyber.png',
+    image: `${import.meta.env.BASE_URL}projects/adarsh-cyber.png`,
     imageAlt: 'Adarsh Cyber Cafe business website preview',
     tags: ['Business Website', 'RTPS Services', 'WhatsApp'],
     link: 'https://adarshcyberraniganj.shop/',
@@ -25,7 +25,7 @@ const projects = [
     statusStyle: 'border-violet-400/20 bg-violet-400/10 text-violet-300',
     description:
       'A personal developer portfolio showcasing my introduction, development skills, selected projects and ways to get in touch.',
-    image: '/projects/personal-portfolio.png',
+    image: `${import.meta.env.BASE_URL}projects/personal-portfolio.png`,
     imageAlt: 'Personal developer portfolio website preview',
     tags: ['React', 'TypeScript', 'Tailwind CSS'],
     link: null,
@@ -40,7 +40,7 @@ const projects = [
     statusStyle: 'border-violet-400/20 bg-violet-400/10 text-violet-300',
     description:
       'An Android utility application in development, planned around image-to-PDF conversion, PDF merging, splitting and compression.',
-    image: '/projects/pdf-converter.png',
+    image: `${import.meta.env.BASE_URL}projects/pdf-converter.png`,
     imageAlt: 'Concept preview of the PDF Converter Android app',
     tags: ['Kotlin', 'Jetpack Compose', 'Android'],
     link: null,

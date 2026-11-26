@@ -87,7 +87,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Ashish-Sharma-Resume.pdf"
               className="group inline-flex items-center gap-3 rounded-full border border-white/10 px-7 py-4 text-sm font-bold text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:text-cyan-300"
             >
@@ -132,7 +132,7 @@ export default function Hero() {
           <div className="hero-card hero-float relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/10 bg-[#111827] shadow-2xl shadow-black/40">
 
             <img
-              src="/images/ashish.jpg"
+              src={`${import.meta.env.BASE_URL}images/ashish.png`}
               alt="Portrait of Ashish Sharma"
               width={480}
               height={600}
