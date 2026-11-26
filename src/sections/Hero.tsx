@@ -132,7 +132,7 @@ export default function Hero() {
           <div className="hero-card hero-float relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/10 bg-[#111827] shadow-2xl shadow-black/40">
 
             <img
-              src={`${import.meta.env.BASE_URL}images/ashish.png`}
+              src={`${import.meta.env.BASE_URL}images/ashish.jpg`}
               alt="Portrait of Ashish Sharma"
               width={480}
               height={600}
