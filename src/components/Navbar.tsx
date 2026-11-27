@@ -6,11 +6,7 @@ const links = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Why Me', href: '#why-me' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Process', href: '#process' },
-  { name: 'Journey', href: '#journey' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -74,8 +70,8 @@ export default function Navbar() {
     }
   }, [open])
 
-  const handleLinkClick = (name: string) => {
-    setActive(name)
+  const handleLinkClick = (section: string) => {
+    setActive(section)
     setOpen(false)
   }
 
@@ -90,24 +86,27 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
 
-        {/* Premium Logo */}
+        {/* AshishCode Branding */}
         <a
           href="#home"
           onClick={() => handleLinkClick('home')}
-          aria-label="Ashish home"
+          aria-label="AshishCode home"
           className="group flex shrink-0 flex-col"
         >
           <span className="text-2xl font-black tracking-[-0.06em] text-white transition group-hover:text-violet-200">
-            ASHISH<span className="bg-gradient-to-r from-violet-400 to-cyan-300 bg-clip-text text-transparent">.</span>
+            ASHISH
+            <span className="bg-gradient-to-r from-violet-400 to-cyan-300 bg-clip-text text-transparent">
+              CODE.
+            </span>
           </span>
 
-          <span className="mt-[-2px] text-[8px] font-bold tracking-[0.32em] text-slate-500">
-            DEVELOPER PORTFOLIO
+          <span className="mt-[-2px] text-[8px] font-bold tracking-[0.25em] text-slate-500">
+            FREELANCE WEB DEVELOPER
           </span>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-0.5 xl:flex">
+        <div className="hidden items-center gap-1 xl:flex">
           {links.map((link) => {
             const section = link.href.slice(1)
             const isActive = active === section
@@ -118,7 +117,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => handleLinkClick(section)}
                 aria-current={isActive ? 'location' : undefined}
-                className={`relative whitespace-nowrap rounded-full px-2.5 py-2 text-[12px] font-semibold transition-all duration-300 2xl:px-3 ${
+                className={`relative whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold transition-all duration-300 ${
                   isActive
                     ? 'bg-violet-400/10 text-violet-300'
                     : 'text-slate-400 hover:bg-white/[0.05] hover:text-white'
@@ -136,7 +135,7 @@ export default function Navbar() {
           onClick={() => handleLinkClick('contact')}
           className="hidden shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 px-5 py-3 text-xs font-extrabold text-white shadow-lg shadow-violet-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-violet-500/40 xl:inline-flex"
         >
-          Let's Talk
+          Let's Work Together
           <ArrowUpRight size={15} />
         </a>
 
@@ -182,7 +181,7 @@ export default function Navbar() {
             </p>
 
             <span className="text-[10px] font-semibold text-violet-300">
-              ASHISH / PORTFOLIO
+              INDIA • WORLDWIDE
             </span>
           </div>
 
@@ -205,6 +204,7 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
+
                   {isActive && (
                     <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
                   )}
@@ -224,7 +224,7 @@ export default function Navbar() {
           </a>
 
           <p className="mt-5 text-center text-[10px] tracking-wide text-slate-600">
-            © {new Date().getFullYear()} Ashish Sharma. All rights reserved.
+            © {new Date().getFullYear()} AshishCode. All rights reserved.
           </p>
 
         </div>

@@ -1,9 +1,10 @@
+
 import { ArrowUpRight, Download } from 'lucide-react'
 
 const highlights = [
   { number: '01', label: 'Business Websites' },
-  { number: '02', label: 'E-commerce Solutions' },
-  { number: '03', label: 'Web & App Projects' },
+  { number: '02', label: 'E-commerce Stores' },
+  { number: '03', label: 'Custom Web Solutions' },
 ]
 
 export default function Hero() {
@@ -32,41 +33,57 @@ export default function Hero() {
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
             </span>
 
-            <span className="text-[10px] font-bold tracking-[0.16em] text-emerald-300 sm:text-xs">
-              OPEN TO FREELANCE PROJECTS
+            <span className="text-[9px] font-bold tracking-[0.12em] text-emerald-300 sm:text-xs">
+              AVAILABLE FOR PROJECTS IN INDIA & WORLDWIDE
             </span>
           </div>
 
           {/* Developer Label */}
-          <p className="hero-entrance hero-delay-1 mb-6 text-xs font-bold tracking-[0.3em] text-violet-400">
-            ASHISH SHARMA / WEB DEVELOPER
+          <p className="hero-entrance hero-delay-1 mb-6 text-xs font-bold tracking-[0.25em] text-violet-400">
+            ASHISHCODE / FREELANCE WEB DEVELOPER
           </p>
 
-          {/* Animated Main Heading */}
+          {/* Main Heading */}
           <h1 className="hero-entrance hero-delay-2 max-w-4xl text-5xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
             I build
             <span className="hero-gradient block bg-gradient-to-r from-violet-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent">
               websites that
             </span>
-            help businesses stand out.
+            help businesses grow.
           </h1>
 
           {/* Description */}
           <p className="hero-entrance hero-delay-3 mt-8 max-w-xl text-base leading-8 text-slate-400 md:text-lg">
-            I design and build modern, responsive websites and practical
-            digital experiences for businesses — focused on clear
-            communication, smooth usability and a professional
-            online presence.
+            I design and develop modern, responsive websites for businesses
+            in India and around the world. From professional business websites
+            to e-commerce stores, I focus on great user experiences,
+            performance and a strong online presence.
           </p>
+
+          {/* Service Tags */}
+          <div className="hero-entrance hero-delay-3 mt-6 flex flex-wrap gap-2">
+            <span className="rounded-full border border-violet-400/20 bg-violet-400/[0.06] px-3 py-1.5 text-xs font-semibold text-violet-300">
+              Website Development
+            </span>
+
+            <span className="rounded-full border border-cyan-400/20 bg-cyan-400/[0.06] px-3 py-1.5 text-xs font-semibold text-cyan-300">
+              E-commerce
+            </span>
+
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-300">
+              Responsive Design
+            </span>
+          </div>
 
           {/* Action Buttons */}
           <div className="hero-entrance hero-delay-4 mt-10 flex flex-wrap gap-4">
 
+            {/* Primary CTA */}
             <a
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-violet-500/40"
             >
-              Start a Project
+              Discuss Your Project
 
               <ArrowUpRight
                 size={18}
@@ -74,11 +91,12 @@ export default function Hero() {
               />
             </a>
 
+            {/* Portfolio CTA */}
             <a
               href="#projects"
               className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.03] px-7 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/50 hover:bg-violet-400/10"
             >
-              Explore My Work
+              View My Projects
 
               <ArrowUpRight
                 size={17}
@@ -86,6 +104,7 @@ export default function Hero() {
               />
             </a>
 
+            {/* Resume Download */}
             <a
               href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Ashish-Sharma-Resume.pdf"
@@ -101,7 +120,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Animated Service Highlights */}
+          {/* Service Highlights */}
           <div className="hero-entrance hero-delay-5 mt-16 grid max-w-xl grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:gap-6">
 
             {highlights.map((item) => (
@@ -122,18 +141,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Floating Profile Image */}
+        {/* Profile Image */}
         <div className="hero-entrance hero-delay-3 relative mx-auto w-full max-w-[480px]">
 
-          {/* Animated Image Glow */}
+          {/* Image Glow */}
           <div className="hero-glow pointer-events-none absolute -inset-5 rounded-[35px] bg-gradient-to-br from-violet-500/20 to-cyan-400/10 blur-2xl" />
 
-          {/* Floating Image Card */}
+          {/* Profile Card */}
           <div className="hero-card hero-float relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/10 bg-[#111827] shadow-2xl shadow-black/40">
 
             <img
               src={`${import.meta.env.BASE_URL}images/ashish.jpg`}
-              alt="Portrait of Ashish Sharma"
+              alt="Ashish Sharma, freelance web developer at AshishCode"
               width={480}
               height={600}
               fetchPriority="high"
@@ -145,7 +164,7 @@ export default function Hero() {
             <div className="absolute bottom-7 left-7 right-7">
 
               <p className="text-[10px] font-bold tracking-[0.3em] text-violet-300">
-                WEB DEVELOPER
+                FREELANCE WEB DEVELOPER
               </p>
 
               <h2 className="mt-3 text-3xl font-extrabold text-white md:text-4xl">
@@ -153,7 +172,7 @@ export default function Hero() {
               </h2>
 
               <p className="mt-3 text-sm leading-6 text-slate-300">
-                Building meaningful digital experiences.
+                Based in India. Working with businesses worldwide.
               </p>
 
             </div>
@@ -163,7 +182,7 @@ export default function Hero() {
           <div className="absolute -right-3 top-10 rounded-2xl border border-white/10 bg-[#111827]/95 px-5 py-4 shadow-2xl backdrop-blur-xl transition-transform duration-500 hover:-translate-y-2 sm:-right-6">
 
             <p className="text-xs font-extrabold tracking-wider text-white">
-              WEB <span className="text-violet-400">•</span> APP
+              WEB <span className="text-violet-400">•</span> E-COMMERCE
             </p>
 
             <p className="mt-1 text-[10px] text-slate-400">
